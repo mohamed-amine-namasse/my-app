@@ -45,7 +45,7 @@ function App() {
     setSelectedPostId(null);
     window.scrollTo(0, 0);
   };
-
+  const currentYear = new Date().getFullYear();
   return (
     <div>
       <header className="navbar-container">
@@ -58,6 +58,14 @@ function App() {
           <BlogList posts={posts} onSelectPost={handleSelectPost} />
         )}
       </main>
+      <footer className="footer-container">
+        <div className="footer-content">
+          <p>
+            &copy; {currentYear} Mon Blog WordPress / React. Tous droits
+            réservés.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
