@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from "react";
 
 // REMPLACER par l'URL de base de votre API WordPress
-const BASE_API_URL = "https://votre-domaine.com/wp-json/wp/v2/posts";
+const BASE_API_URL =
+  "https://mohamed-amine-namasse.students-laplateforme.io/wordpress-6.8.3/wordpress/wp-json/wp/v2/posts";
 
 /**
  * Affiche un article de blog unique en utilisant l'ID.

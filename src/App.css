@@ -1,35 +1,218 @@
-/* Base */
-.app-container {
-  min-height: 100vh;
-  background-color: var(--color-background);
+* {
+  box-sizing: border-box;
+}
+
+/* Styles pour Navbar.jsx */
+
+.navbar-container {
+  background-color: #282c34; /* Couleur de fond sombre */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  padding: 16px;
-  font-family: "Inter", sans-serif;
-  min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
 }
 
-/* Header */
-.app-header {
-  padding: 32px 0;
-  text-align: center;
-  width: 100%;
-  max-width: 640px;
+.navbar-brand {
+  color: #61dafb; /* Couleur bleu clair typique de React */
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.app-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-links {
+  list-style: none;
   display: flex;
-  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin-left: 20px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #61dafb;
+}
+
+/* Styles pour BlogList.jsx */
+
+.blog-list-container {
+  padding: 20px 0;
+}
+
+/* Conteneur d'un aperçu d'article */
+.post-summary {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  margin-bottom: 25px;
+  margin-right: 25px;
+  background-color: #fcfcfc;
+  border-radius: 6px;
+  transition: box-shadow 0.3s;
+}
+
+.post-summary:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-summary h2 {
+  margin-top: 0;
+  color: #007bff; /* Mettre en évidence les titres */
+  font-size: 1.5rem;
+}
+
+/* L'extrait de l'article */
+.post-excerpt p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Ligne de séparation dans la liste */
+.post-summary hr {
+  border: none;
+  border-top: 1px solid #f0f0f0;
+  margin: 20px 0 0;
+}
+
+/* Styles pour BlogPost.jsx */
+
+.blog-post-detail {
+  padding: 30px;
+}
+
+.blog-post-detail h1 {
+  /* Écrase le style h1 de .App main si nécessaire, mais ici on le laisse */
+  font-size: 2.5rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db; /* Souligné coloré pour le titre principal */
+  padding-bottom: 15px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+/* Contenu de l'article */
+.post-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Styles pour les éléments HTML générés par WordPress (images, listes, etc.) */
+.post-content p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.post-content img {
+  max-width: 100%; /* S'assurer que les images ne débordent pas */
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+.post-content ul,
+.post-content ol {
+  margin-left: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.post-content blockquote {
+  border-left: 5px solid #3498db;
+  padding-left: 15px;
+  margin: 25px 0;
+  font-style: italic;
+  color: #666;
+}
+
+main {
+  background-color: gold;
+  padding-left: 25px;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: underline;
+}
+
+/* Styles CSS pour les Boutons */
+
+/* 1. Styles de base communs */
+.read-more-button,
+.back-button {
+  /* Mise en forme de base */
+  font-family: inherit; /* Utilise la police du corps (body) */
+  font-size: 1rem;
+  font-weight: 600; /* Semi-bold */
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  /* Dimensions et Espacement */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 12px 24px;
+  border-radius: 6px; /* Coins légèrement arrondis */
+
+  /* Couleurs et Bordures */
+  border: 2px solid transparent; /* Bordure transparente pour éviter le déplacement au hover */
+  transition: all 0.2s ease-in-out; /* Transition douce pour les effets */
+}
+
+/* 2. Style du bouton "Lire la suite" (Primaire) */
+.read-more-button {
+  background-color: green; /* Bleu primaire */
   color: white;
 }
-.app-title {
-  font-size: 36px;
-  font-weight: 800;
-  color: var(--color-primary-dark);
+
+.read-more-button:hover,
+.read-more-button:focus {
+  background-color: rgb(14, 133, 14); /* Bleu plus foncé au survol */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+  transform: translateY(-1px); /* Léger soulèvement */
+}
+
+/* 3. Style du bouton "Retour à la liste" (Secondaire/Neutre) */
+.back-button {
+  background-color: #f8f9fa; /* Gris très clair */
+  color: #343a40; /* Texte gris foncé */
+  border-color: #ced4da; /* Bordure grise */
+
+  /* Réduction de la marge pour les boutons en haut de page (dans BlogPost) */
+  margin-bottom: 20px;
+}
+
+.back-button:hover,
+.back-button:focus {
+  background-color: #e2e6ea; /* Gris un peu plus foncé au survol */
+  border-color: #dae0e5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 4. Styles pour les états désactivés (bonne pratique) */
+.read-more-button:disabled,
+.back-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
 }

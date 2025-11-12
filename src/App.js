@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import BlogList from "./components/BlogList";
 import BlogPost from "./components/BlogPost";
+import Navbar from "./components/Navbar";
+import "./App.css";
 
 const API_URL =
   "https://mohamed-amine-namasse.students-laplateforme.io/wordpress-6.8.3/wordpress/wp-json/wp/v2/posts";
@@ -45,10 +47,9 @@ function App() {
   };
 
   return (
-    <div className="app-container">
-      <header className="app-header">
-        <h1 className="app-title">Jeu de Mémre</h1>
-        <p>Trouvez toutes les paires !</p>
+    <div>
+      <header className="navbar-container">
+        <Navbar onBackToList={handleBackToList} />
       </header>
       <main>
         {selectedPostId ? (
