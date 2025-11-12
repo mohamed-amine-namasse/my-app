@@ -97,6 +97,7 @@
 
 .blog-post-detail h1 {
   /* Écrase le style h1 de .App main si nécessaire, mais ici on le laisse */
+  text-align: center;
   font-size: 2.5rem;
   color: #2c3e50;
   border-bottom: 2px solid #3498db; /* Souligné coloré pour le titre principal */
@@ -144,7 +145,7 @@ main {
   padding-left: 25px;
 }
 
-h1 {
+.blog-list-container h1 {
   text-align: center;
   color: black;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
