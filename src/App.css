@@ -19,7 +19,7 @@
 }
 
 .navbar-brand {
-  color: white;
+  color: goldenrod;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
@@ -126,13 +126,13 @@
 }
 
 main {
-  background-color: rgb(165, 98, 109);
+  background-color: yellowgreen;
   padding-left: 25px;
 }
 
 .blog-list-container h1 {
   text-align: center;
-  color: white;
+  color: black;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-decoration: underline;
