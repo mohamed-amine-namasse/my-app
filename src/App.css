@@ -126,7 +126,7 @@
 }
 
 main {
-  background-color: yellowgreen;
+  background-color: burlywood;
   padding-left: 25px;
 }
 
@@ -222,4 +222,13 @@ main {
 
 .footer-content p {
   margin: 5px 0;
+}
+
+.featured-image {
+  display: flex;
+  justify-content: center;
+}
+
+.featured-image img {
+  max-width: 70%;
 }
