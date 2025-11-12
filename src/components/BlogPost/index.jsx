@@ -70,10 +70,6 @@ function BlogPost({ postId, onBack }) {
         className="post-content"
         dangerouslySetInnerHTML={{ __html: post.content.rendered }}
       />
-
-      <button onClick={onBack} className="back-button bottom-button">
-        &larr; Retour à la liste des articles
-      </button>
     </article>
   );
 }

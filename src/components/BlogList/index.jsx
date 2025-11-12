@@ -30,8 +30,6 @@ function BlogList({ posts, onSelectPost }) {
           >
             Lire la suite &rarr;
           </button>
-
-          <hr />
         </article>
       ))}
     </section>

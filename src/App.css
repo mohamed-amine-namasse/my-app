@@ -19,7 +19,7 @@
 }
 
 .navbar-brand {
-  color: #61dafb; /* Couleur bleu clair typique de React */
+  color: white;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
@@ -72,7 +72,7 @@
 
 .post-summary h2 {
   margin-top: 0;
-  color: #007bff; /* Mettre en évidence les titres */
+  color: #0c7d9c; /* Mettre en évidence les titres */
   font-size: 1.5rem;
 }
 
@@ -80,13 +80,6 @@
 .post-excerpt p {
   margin-bottom: 15px;
   color: #555;
-}
-
-/* Ligne de séparation dans la liste */
-.post-summary hr {
-  border: none;
-  border-top: 1px solid #f0f0f0;
-  margin: 20px 0 0;
 }
 
 /* Styles pour BlogPost.jsx */
@@ -133,13 +126,13 @@
 }
 
 main {
-  background-color: gold;
+  background-color: rgb(165, 98, 109);
   padding-left: 25px;
 }
 
 .blog-list-container h1 {
   text-align: center;
-  color: black;
+  color: white;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-decoration: underline;
