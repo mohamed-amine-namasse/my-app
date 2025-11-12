@@ -79,10 +79,18 @@ function BlogPost({ postId, onBack }) {
   if (!post) {
     return <p>Article introuvable.</p>;
   }
-
+  // Fonction utilitaire pour décoder les entités HTML (nécessite un DOM temporaire)
+  const decodeHtmlEntities = (html) => {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    return doc.documentElement.textContent;
+  };
+  // Décodez d'abord le titre et le contenu
+  const decodedTitle = decodeHtmlEntities(post.title.rendered);
   // Préparer le titre et le contenu pour l'affichage (avec dangerouslySetInnerHTML)
-  const title = post.title.rendered;
-  const content = { __html: post.content.rendered };
+  //const title = post.title.rendered;
+  const content = {
+    __html: decodeHtmlEntities(post.content.rendered),
+  };
 
   return (
     <div className="blog-post-detail">
@@ -90,12 +98,15 @@ function BlogPost({ postId, onBack }) {
         Retour à la liste des articles
       </button>
 
-      <h1>{title}</h1>
+      <h1>{decodedTitle}</h1>
 
       {/* Affichage de l'image de mise en avant */}
       {featuredImageUrl && (
         <figure className="featured-image">
-          <img src={featuredImageUrl} alt={`Image à la une pour ${title}`} />
+          <img
+            src={featuredImageUrl}
+            alt={`Image à la une pour ${decodedTitle} `}
+          />
         </figure>
       )}
 
