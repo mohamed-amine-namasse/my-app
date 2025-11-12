@@ -118,14 +118,6 @@
   text-align: justify;
 }
 
-.post-content img {
-  max-width: 100%; /* S'assurer que les images ne débordent pas */
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border-radius: 5px;
-}
-
 .post-content ul,
 .post-content ol {
   margin-left: 20px;
